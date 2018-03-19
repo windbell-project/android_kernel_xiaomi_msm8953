@@ -531,6 +531,9 @@ struct fb_info {
 	} *apertures;
 
 	bool skip_vt_switch; /* no VT switch on suspend/resume required */
+#if (defined CONFIG_MACH_XIAOMI_TIFFANY) || (defined CONFIG_MACH_XIAOMI_TISSOT)
+	int blank;
+#endif
 };
 
 static inline struct apertures_struct *alloc_apertures(unsigned int max_num) {
