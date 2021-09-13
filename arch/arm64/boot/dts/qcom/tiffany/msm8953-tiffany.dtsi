@@ -118,6 +118,7 @@
 
 	usb3: ssusb@7000000{
 		qcom,detect-dpdm-floating;
+		extcon = <&qpnp_smbcharger>;
 	};
 
 };
